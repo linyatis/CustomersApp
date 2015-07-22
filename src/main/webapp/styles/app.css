@@ -5,13 +5,16 @@ body {
 
 .header {
     padding-bottom: 20px;
-    margin-bottom: 8px;
     border-bottom: 1px solid #dbdbdb;
+}
+
+.header a:hover {
+    text-decoration: none;
 }
 
 .footer {
     padding-top: 19px;
-    margin-top: 8px;
+    margin-top: 19px;
     color: #777;
     border-top: 1px solid #dbdbdb;
 }

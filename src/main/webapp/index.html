@@ -3,29 +3,30 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Iterating Over Data</title>
-    <link href="libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <title>Customers App</title>
+
+    <link href="vendor/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="styles/app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
     <div class="container">
-        <header class="header clearfix">
-            <h1 class="text-muted">Customers App</h1>
+        <header class="header">
+            <h1><a href="#/">Customers App</a></h1>
         </header>
 
-        <div ng-view></div>
+        <div class="clearfix" ng-view></div>
 
         <footer class="footer">
-            <p>© Company 2014</p>
+            <p>&copy; 2015 Company</p>
         </footer>
     </div>
 
 
 
     <!-- Vendor scripts -->
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-route.js"></script>
 
     <!-- App scripts -->
     <script src="app/app.module.js"></script>

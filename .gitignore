@@ -26,6 +26,3 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
-
-#Bower library
-/src/main/webapp/libs/
