@@ -6,16 +6,14 @@
             var vm = this;
 
             vm.customers = [];
-            vm.hasData = hasData;
-            vm.removeCustomer = removeCustomer;
+            vm.deleteCustomer = deleteCustomer;
 
-
-            load();
+            init();
 
             /**
              * Load all the data needed.
              */
-            function load() {
+            function init() {
                 CustomersService.list().then(function (customers) {
                     vm.customers = customers;
                 });
@@ -25,20 +23,11 @@
              * Deletes the given customer
              * @param {Object} customer The customer to be deleted
              */
-            function removeCustomer(customer) {
+            function deleteCustomer(customer) {
                 CustomersService.remove(customer.id).then(function () {
-                    load();
+                    init();
                 });
             };
-
-            /**
-             * Checks for customers.
-             * @returns {Boolean} `True` if any customer.
-             */
-            function hasData () {
-                //return (vm.customers && vm.customers.length > 0);
-                return true;
-            }
 
         };
 

@@ -10,13 +10,18 @@
                     return result.data;
                 });
             };
+            factory.getById = function getById(id) {
+                return $http.get("customers/" + id).then(function (result) {
+                    return result.data;
+                });
+            };
             factory.insert = function insert(customer) {
-                return $http.post("customers").then(function (result) {
+                return $http.post("customers", customer).then(function (result) {
                     return result.data;
                 });
             };
             factory.update = function update(customer) {
-                return $http.put("customers/" + customer.id).then(function (result) {
+                return $http.put("customers/" + customer.id, customer).then(function (result) {
                     return result.data;
                 });
             };
@@ -25,14 +30,6 @@
             };
 
             return factory;
-
-
-
-
-
-
-
-
         };
 
     CustomersService.$inject = injectedParams;
