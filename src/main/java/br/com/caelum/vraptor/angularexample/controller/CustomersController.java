@@ -17,7 +17,7 @@ import br.com.caelum.vraptor.angularexample.model.Customer;
 import br.com.caelum.vraptor.view.Results;
 
 @Controller
-@Path("customers")
+@Path("/customers")
 public class CustomersController {
 
 	private Result result;
@@ -39,21 +39,27 @@ public class CustomersController {
 	@Get
 	public void list() {
 		List<Customer> customers = dao.listAll();
-		result.use(Results.json()).from(customers).serialize();
+		result.use(Results.json()).withoutRoot().from(customers).serialize();
+	}
+
+	@Get("/{id}")
+	public void getById(Long id) {
+		Customer customer = dao.getById(id);
+		result.use(Results.json()).withoutRoot().from(customer).serialize();
 	}
 
 	@Post
 	@Consumes("application/json")
 	public void save(Customer customer) {
 		dao.add(customer);
-		result.use(Results.json()).from(customer).serialize();
+		result.use(Results.json()).withoutRoot().from(customer).serialize();
 	}
 
 	@Put("/{customer.id}")
 	@Consumes("application/json")
 	public void update(Customer customer) {
 		dao.update(customer);
-		result.use(Results.json()).from(customer).serialize();
+		result.use(Results.json()).withoutRoot().from(customer).serialize();
 	}
 
 	@Delete("/{id}")
