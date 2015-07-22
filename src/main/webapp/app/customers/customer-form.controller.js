@@ -18,10 +18,19 @@
                 vm.title = $routeParams.id ? "Edit customer" : "New customer";
 
                 if ($routeParams.id) {
-                    CustomersService.getById($routeParams.id).then(function (customer) {
-                        vm.customer = customer;
-                    });
+                    CustomersService.getById($routeParams.id).then(applyCustomer);
                 }
+            }
+
+            /**
+             * Apply the given customer to the scope
+             * @param   {Object}   customer
+             * @returns {Object}   customer
+             */
+            function applyCustomer(customer) {
+                vm.customer = customer;
+
+                return customer;
             }
 
             /**
