@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="customersApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Iterating Over Data</title>
+    <link href="libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="container">
+        <header class="header clearfix">
+            <h1 class="text-muted">Customers App</h1>
+        </header>
+
+        <div ng-view></div>
+
+        <footer class="footer">
+            <p>© Company 2014</p>
+        </footer>
+    </div>
+
+
+
+    <!-- Vendor scripts -->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+
+    <!-- App scripts -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.route.js"></script>
+    <script src="app/customers/customers.service.js"></script>
+    <script src="app/customers/customers.controller.js"></script>
+    <script src="app/customers/customer-form.controller.js"></script>
+</body>
+</html>
