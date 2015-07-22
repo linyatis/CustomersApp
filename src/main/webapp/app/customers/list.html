@@ -1,0 +1,25 @@
+<div class="col-md-6">
+    <h2>Customers list</h2>
+
+    <a class="btn btn-primary" href="#/customers/new">Add customer</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="customer in vm.customers">
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>
+                    <a class="btn btn-sm btn-info" ng-href="#/customers/{{ customer.id }}/edit">Edit</a>
+                    <a class="btn btn-sm btn-danger" ng-click="vm.deleteCustomer(customer)">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

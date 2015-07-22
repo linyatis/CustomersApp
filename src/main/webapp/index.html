@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="customersApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Customers App</title>
+
+    <link href="vendor/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1><a href="#/">Customers App</a></h1>
+        </header>
+
+        <div class="clearfix" ng-view></div>
+
+        <footer class="footer">
+            <p>&copy; 2015 Company</p>
+        </footer>
+    </div>
+
+
+
+    <!-- Vendor scripts -->
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-route.js"></script>
+
+    <!-- App scripts -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.route.js"></script>
+    <script src="app/customers/customers.service.js"></script>
+    <script src="app/customers/customers.controller.js"></script>
+    <script src="app/customers/customer-form.controller.js"></script>
+</body>
+</html>
