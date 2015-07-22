@@ -14,4 +14,6 @@ public interface CustomerDAO {
 
 	List<Customer> listAll();
 
+	Customer getById(Long id);
+
 }

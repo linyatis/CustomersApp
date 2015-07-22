@@ -30,4 +30,10 @@ public class DefaultCustomerDAO implements CustomerDAO {
 		return null;
 	}
 
+	@Override
+	public Customer getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
